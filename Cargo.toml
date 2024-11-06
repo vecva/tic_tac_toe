@@ -10,4 +10,4 @@ lto = true
 [dependencies]
 clap = { version = "4.4.8", features = ["derive"] }
 rand = "0.8.5"
-thiserror = "1.0.50"
+thiserror = "2.0.0"
