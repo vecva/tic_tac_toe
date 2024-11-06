@@ -1,6 +1,6 @@
 # Overview
 
-This project implements a Tic-Tac-Toe game enhanced with multiple AI strategies.
+This project implements a Tic-tac-toe game enhanced with multiple AI strategies.
 
 # Features
 
