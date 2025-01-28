@@ -13,7 +13,7 @@
 // limitations under the License.
 
 use crate::game::{Game, Square};
-use rand::{rngs::ThreadRng, seq::SliceRandom};
+use rand::{rngs::ThreadRng, seq::IndexedRandom};
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -29,7 +29,7 @@ pub(crate) struct Random {
 impl Random {
   pub(super) fn new() -> Self {
     Self {
-      random: rand::thread_rng(),
+      random: rand::rng(),
     }
   }
 

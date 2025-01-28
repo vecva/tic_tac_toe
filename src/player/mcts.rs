@@ -15,7 +15,7 @@
 mod node;
 use crate::game::{Game, GameError, Outcome, Side, Square};
 use node::Node;
-use rand::{prelude::SliceRandom, rngs::ThreadRng};
+use rand::{rngs::ThreadRng, seq::IndexedRandom};
 use std::collections::HashMap;
 use thiserror::Error;
 
@@ -47,7 +47,7 @@ impl Mcts {
     Self {
       nodes: Vec::with_capacity(NODES_CAPACITY),
       square_map: HashMap::with_capacity(Square::COUNT as usize),
-      random: rand::thread_rng(),
+      random: rand::rng(),
       outcome: Outcome::Draw,
       node_index: Self::ROOT_NODE,
     }
