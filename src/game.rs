@@ -391,7 +391,7 @@ impl Game {
       || self.bitboard & Bitboard::COLUMN_RIGHT_O == Bitboard::COLUMN_RIGHT_O
     {
       self.outcome = Some(Outcome::OWin);
-    } else if (self.bitboard | self.bitboard >> 9) & Bitboard::X_MASK == Bitboard::X_MASK {
+    } else if (self.bitboard | (self.bitboard >> 9)) & Bitboard::X_MASK == Bitboard::X_MASK {
       self.outcome = Some(Outcome::Draw);
     }
   }
