@@ -43,7 +43,6 @@ trait BitboardConstants {
   const BOTTOM_LEFT_O: Bitboard = Self::MIDDLE_RIGHT_O << 1;
   const BOTTOM_MIDDLE_O: Bitboard = Self::BOTTOM_LEFT_O << 1;
   const BOTTOM_RIGHT_O: Bitboard = Self::BOTTOM_MIDDLE_O << 1;
-  const EMPTY_SQUARE: Bitboard = !Bitboard::TOP_LEFT_X & Bitboard::TOP_LEFT_X;
   const X_MASK: Bitboard = Self::TOP_LEFT_X
     | Self::TOP_MIDDLE_X
     | Self::TOP_RIGHT_X
